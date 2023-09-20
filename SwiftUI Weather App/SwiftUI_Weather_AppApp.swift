@@ -11,7 +11,17 @@ import SwiftUI
 struct SwiftUI_Weather_AppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(weathers: [
+                Weather(dayName: "Wed", icon: "//cdn.weatherapi.com/weather/64x64/night/122.png", tempreture: "39"),
+                
+                Weather(dayName: "Thu", icon: "//cdn.weatherapi.com/weather/64x64/night/122.png", tempreture: "39"),
+            
+                Weather(dayName: "Fri", icon: "//cdn.weatherapi.com/weather/64x64/night/122.png", tempreture: "39"),
+            
+                Weather(dayName: "Sat", icon: "//cdn.weatherapi.com/weather/64x64/night/122.png", tempreture: "39"),
+            
+                Weather(dayName: "Sun", icon: "//cdn.weatherapi.com/weather/64x64/night/122.png", tempreture: "39"),
+            ])
         }
     }
 }
