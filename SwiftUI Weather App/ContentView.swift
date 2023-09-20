@@ -15,7 +15,9 @@ struct ContentView: View {
         
     // Function to fetch weather data from the API
     func fetchWeatherData() {
-        guard let url = URL(string: "https://api.weatherapi.com/v1/forecast.json?key=e35366d5e62a4621b58191550231909&q=\(locationViewModel.latitude),\(locationViewModel.longitude)&days=7&aqi=no&alerts=no") else {
+        let apiKey = "e35366d5e62a4621b58191550231909" //this is dummy api key i will revoke, please use your key from https://weatherapi.com
+        
+        guard let url = URL(string: "https://api.weatherapi.com/v1/forecast.json?key=\(apiKey)&q=\(locationViewModel.latitude),\(locationViewModel.longitude)&days=7&aqi=no&alerts=no") else {
             return
         }
         
